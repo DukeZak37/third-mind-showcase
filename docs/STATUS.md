@@ -7,7 +7,7 @@ Labels used everywhere in this repo:
 - **SIMULATED**: mocked output, labeled as such wherever it appears.
 - **PLANNED**: designed or discussed, not built.
 
-Status as of 2026-11-19.
+Status as of 2026-11-20.
 
 | Feature | Label | Notes |
 |---|---|---|
@@ -21,8 +21,9 @@ Status as of 2026-11-19.
 | Evidence desk: operator review of agent actions and evidence | DEV-TESTED | Synthetic inputs only |
 | GPT, Grok and Bahamut replies inside Discord | SIMULATED | Every reply is labeled SIMULATED until provider keys are approved |
 | Twitch, Kick, X bookmarks, SMS reply codes, OBS overlay, content loop | SIMULATED | Built and tested in mock mode; no live accounts connected |
-| Grok bot integration and paper-trading bridge | PLANNED | Offline contracts only; no exchange access, no real orders |
-| Production deployment on Duke's cloud VM | PLANNED | Nothing runs there; needs Duke's approval |
+| Dedicated Grok Slack bot | PLANNED | The team uses a human-relayed workflow, not a dedicated Slack identity |
+| Paper-trading bridge | PLANNED | Offline contracts only; no exchange access, no real orders |
+| Current hub production rollout | NOT YET VERIFIED | The public evidence does not establish which hub revision or opt-in features are running |
 
 What this repo is **not**: the implementation. The hub and connector code stay in private repos until they pass a
 security and privacy review.

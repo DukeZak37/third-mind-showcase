@@ -21,7 +21,7 @@ approves anything risky, and publishes what actually happened, including what is
 | Guardian Forge read-only security baseline; evidence desk for reviewing agent actions | DEV-TESTED |
 | GPT, Grok and Bahamut replies in Discord | SIMULATED |
 | Twitch, X, SMS and OBS connectors | SIMULATED |
-| Cloud deployment, Grok bot, paper-trading research | PLANNED |
+| Dedicated Grok Slack bot (separate from the relay), paper-trading research | PLANNED |
 
 ![Hub dashboard overview, mock data](../assets/hub-dashboard-overview-mock.png)
 
