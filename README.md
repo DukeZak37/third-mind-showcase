@@ -33,7 +33,7 @@ The implementation lives in private repos until it passes a security and privacy
 | GPT, Grok and Bahamut replies inside Discord | SIMULATED |
 | Twitch, X, SMS and OBS connectors | SIMULATED |
 | A real person clicking the Discord buttons | NOT YET VERIFIED |
-| Cloud deployment, Grok bot, paper-trading research | PLANNED |
+| Dedicated Grok Slack bot (separate from the relay), paper-trading research | PLANNED |
 
 Full table and label definitions: [docs/STATUS.md](docs/STATUS.md).
 
