@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Third Mind · DukeZak37</title>
 <meta name="description" content="Third Mind: a human-directed multi-agent experiment by DukeZak37, built with Devin. What is real, what is simulated, and what is planned.">
-<meta property="og:title" content="Third Mind · DukeZak37"><meta property="og:description" content="One human, multiple AI agents, real evidence."><meta property="og:image" content="https://dukezak37.github.io/third-mind-showcase/assets/shield-37.png"><meta name="theme-color" content="#051014">
+<meta property="og:title" content="Third Mind · DukeZak37"><meta property="og:description" content="One human, multiple AI agents, real evidence."><meta property="og:image" content="https://dukezak37.github.io/third-mind-showcase/assets/third-mind-wide.webp"><meta name="theme-color" content="#051014">
 <link rel="icon" href="assets/shield-37.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@ a{color:var(--emerald)}a:focus-visible,.player:focus-visible{outline:2px solid v
 .start{position:relative;margin-top:28px;font-family:var(--pix);font-size:.8rem;color:var(--charcoal);background:var(--gold);padding:14px 22px;text-decoration:none;box-shadow:4px 4px 0 var(--red),0 0 24px #E4B35D66;display:inline-block}
 .start:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red),0 0 30px #E4B35D99}
 .blink{animation:blink 1.1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
-.coin{position:relative;margin-top:14px;font-family:var(--pix);font-size:.6rem;color:#8fd9b9;letter-spacing:.15em}
+.coin{position:relative;margin-top:14px;font-family:var(--pix);font-size:.62rem;color:#a6e6c9;letter-spacing:.15em}
 /* ticker */
 .ticker{overflow:hidden;background:#020a0c;border-bottom:2px solid var(--gold);font-family:var(--pix);font-size:.62rem;color:var(--emerald);white-space:nowrap}
 .ticker div{display:inline-block;padding:10px 0;animation:tick 38s linear infinite}
@@ -70,14 +70,14 @@ h2 .lvl{display:block;font-size:.55em;color:var(--emerald);letter-spacing:.2em;m
 .stage-art{display:block;width:100%;height:auto;border:2px solid var(--line);margin:4px 0 14px}
 .pslot{font-family:var(--pix);font-size:1.1rem;color:var(--emerald);display:flex;justify-content:space-between;align-items:center}
 .gold .pslot{color:var(--gold)}.red .pslot{color:#ff8a7e}
-.pslot span{font-size:.5rem;color:#bcd3cc;letter-spacing:.1em}
+.pslot span{font-size:.52rem;color:#d3e4df;letter-spacing:.1em}
 .board{border:3px solid var(--emerald);box-shadow:0 0 30px #1BC88033 inset,0 0 0 3px var(--charcoal),0 0 0 5px var(--gold);background:#020c0d;padding:8px 10px 4px;margin-top:12px}
 .board-title{font-family:var(--pix);text-align:center;color:var(--gold);font-size:.75rem;padding:10px 0 12px;letter-spacing:.15em}
 table{width:100%;border-collapse:collapse;font-size:.95rem}
 th,td{text-align:left;padding:10px 6px;border-bottom:1px dashed #1b3a36;vertical-align:top}
 th{font-family:var(--pix);font-size:.55rem;color:var(--emerald);letter-spacing:.1em}
 tbody tr:hover{background:#0b2522}
-.tag{display:inline-block;font-family:var(--pix);font-size:.5rem;line-height:1.6;letter-spacing:.06em;padding:4px 8px;white-space:nowrap}
+.tag{display:inline-block;font-family:var(--pix);font-size:.58rem;line-height:1.6;letter-spacing:.06em;padding:4px 8px;white-space:nowrap}
 .live{background:var(--emerald);color:var(--charcoal);box-shadow:0 0 12px #1BC88088}
 .dev{background:var(--gold);color:var(--charcoal)}
 .sim{border:1px solid var(--parchment);color:var(--parchment)}
@@ -89,7 +89,7 @@ figure{margin:0}
 .crt{background:#000;padding:10px;border:2px solid #2a4a44;border-radius:18px;box-shadow:inset 0 0 30px #000,0 0 0 4px #0b1a1a}
 .crt img{display:block;width:100%;height:auto;border-radius:10px;filter:saturate(1.1) contrast(1.05)}
 .crt.wide{margin-top:16px}
-figcaption{font-family:var(--pix);font-size:.5rem;line-height:1.8;color:#9fc6b8;margin:8px 4px 0;letter-spacing:.06em}
+figcaption{font-family:var(--pix);font-size:.58rem;line-height:1.8;color:#b9dccf;margin:8px 4px 0;letter-spacing:.06em}
 ul.rules,ul.more{list-style:none;padding:0}
 ul.rules li,ul.more li{padding:8px 0 8px 30px;position:relative}
 ul.rules li::before{content:"\2666";position:absolute;left:6px;color:var(--gold)}
@@ -98,15 +98,15 @@ footer{max-width:1000px;margin:0 auto;padding:16px 20px 40px;font-size:.85rem;co
 .gameover{font-family:var(--pix);text-align:center;color:var(--emerald);font-size:.7rem;margin:40px 0 8px;letter-spacing:.2em}
 body.turbo .floor{animation-duration:.4s}body.turbo .title{animation:hue 2s linear infinite}@keyframes hue{to{filter:hue-rotate(360deg)}}
 #toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);font-family:var(--pix);font-size:.6rem;background:var(--gold);color:#000;padding:12px 16px;z-index:60;display:none}
-@media (max-width:560px){.hero{min-height:0;padding:28px 12px 110px}.scores{grid-template-columns:1fr 1fr}.score b{font-size:1.6rem}.score span{font-size:.8rem}.profile dl{grid-template-columns:1fr;gap:2px}.profile dd{margin-bottom:8px}.players{grid-template-columns:1fr 1fr;gap:10px}.players .card{padding:10px}.players .card h3{font-size:.92rem}.players .card{font-size:.88rem}.sprite{font-size:2.6rem}.pslot{font-size:.8rem}.pslot span{font-size:.4rem}th:first-child{width:62%}nav.hud a{padding:7px 6px;font-size:.5rem}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:560px){.hero{min-height:0;padding:28px 12px 110px}.scores{grid-template-columns:1fr 1fr}.score b{font-size:1.6rem}.score span{font-size:.8rem}.profile dl{grid-template-columns:1fr;gap:2px}.profile dd{margin-bottom:8px}.players{grid-template-columns:1fr 1fr;gap:10px}.players .card{padding:10px}.players .card h3{font-size:.92rem}.players .card{font-size:.88rem}.sprite{font-size:2.6rem}.pslot{font-size:.8rem}.pslot span{font-size:.46rem}th:first-child{width:62%}nav.hud a{padding:7px 6px;font-size:.5rem}}
+@media (prefers-reduced-motion:reduce){.ticker div{white-space:normal;padding:10px 12px}*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="hero">
  <div class="stars" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div><div class="floor" aria-hidden="true"></div>
- <img class="marquee" src="assets/third-mind-wide.webp" alt="Third Mind marquee art: the dragon 37 crest, an emerald-winged hooded guardian and the words Third Mind, Skynet, Be Blessed" width="1600" height="533">
+ <img class="marquee" fetchpriority="high" decoding="async" src="assets/third-mind-wide.webp" alt="Third Mind marquee art: the dragon 37 crest, an emerald-winged hooded guardian and the words Third Mind, Skynet, Be Blessed" width="1600" height="533">
  <h1 class="title"><small>DUKEZAK37 PRESENTS</small>THIRD MIND</h1>
  <p class="tagline">One human, multiple AI agents, and real systems with the evidence to back them up.</p>
  <a class="start" href="#main"><span class="blink">&#9654;</span> PRESS START</a>
@@ -167,10 +167,10 @@ body.turbo .floor{animation-duration:.4s}body.turbo .title{animation:hue 2s line
 <h2 id="screens"><span class="lvl">STAGE 3</span>SCREENS</h2>
 <img class="stage-art" src="assets/hdr-experiments.webp" alt="Experiments header: build, test, learn" width="1200" height="375" loading="lazy">
 <div class="grid crt-grid">
- <figure class="crt"><img src="assets/hub-dashboard-overview-mock.png" alt="Hub dashboard overview with mock agents and zero spend" loading="lazy"><figcaption>Hub dashboard, mock data</figcaption></figure>
- <figure class="crt"><img src="assets/hub-dashboard-community-mock.png" alt="Community tab with mock Telegram and Discord messages from test users" loading="lazy"><figcaption>Community feed, mock data and test users</figcaption></figure>
+ <figure class="crt"><img src="assets/hub-dashboard-overview-mock.webp" alt="Hub dashboard overview with mock agents and zero spend" loading="lazy"><figcaption>Hub dashboard, mock data</figcaption></figure>
+ <figure class="crt"><img src="assets/hub-dashboard-community-mock.webp" alt="Community tab with mock Telegram and Discord messages from test users" loading="lazy"><figcaption>Community feed, mock data and test users</figcaption></figure>
 </div>
-<figure class="crt wide"><img src="assets/skynet-lab-header.png" alt="Skynet Lab channel header: agents, memory, commands" loading="lazy"><figcaption>Skynet Lab channel header, from Duke's own artwork</figcaption></figure>
+<figure class="crt wide"><img src="assets/skynet-lab-header.webp" alt="Skynet Lab channel header: agents, memory, commands" loading="lazy"><figcaption>Skynet Lab channel header, from Duke's own artwork</figcaption></figure>
 
 <h2 id="rules"><span class="lvl">STAGE 4</span>HOUSE RULES</h2>
 <img class="stage-art" src="assets/hdr-audit-log.webp" alt="Audit log header: provenance, changes, results" width="1200" height="375" loading="lazy">
