@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Third Mind · DukeZak37</title>
+<meta name="description" content="Third Mind: a human-directed multi-agent experiment by DukeZak37, built with Devin. What is real, what is simulated, and what is planned.">
+<style>
+:root{--charcoal:#051014;--forest:#081F20;--emerald:#1BC880;--gold:#E4B35D;--parchment:#F4E7CC;--red:#E04237}
+*{box-sizing:border-box}
+body{margin:0;background:var(--charcoal);color:var(--parchment);font:16px/1.6 Inter,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--emerald)}a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+header{border-bottom:4px solid var(--emerald)}
+header img{display:block;width:100%;height:auto;max-width:1200px;margin:0 auto}
+main{max-width:960px;margin:0 auto;padding:24px 20px 48px}
+h1{font-size:clamp(1.6rem,5vw,2.4rem);margin:.4em 0 .2em}
+h2{color:var(--gold);font-size:1.3rem;margin-top:2em;border-bottom:1px solid #1b3a36;padding-bottom:.3em}
+.lead{font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--forest);border:1px solid #1b3a36;border-radius:10px;padding:16px}
+.card h3{margin:.1em 0 .4em;font-size:1.05rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #1b3a36;vertical-align:top}
+th{color:var(--gold)}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.live{background:var(--emerald);color:var(--charcoal)}
+.dev{background:var(--gold);color:var(--charcoal)}
+.sim{border:1px solid var(--parchment);color:var(--parchment)}
+.plan{border:1px dashed #8aa39c;color:#c9d6d2}
+.todo{border:1px solid var(--red);color:#ffb4ac}
+figure{margin:0}figure img{width:100%;height:auto;border-radius:8px;border:1px solid #1b3a36}
+figcaption{font-size:.85rem;color:#c9d6d2;margin-top:4px}
+footer{max-width:960px;margin:0 auto;padding:0 20px 32px;font-size:.85rem;color:#c9d6d2}
+</style>
+</head>
+<body>
+<header><img src="assets/banner.svg" alt="DUKEZAK37 · THIRD MIND. Cutting through the noise. Human-directed multi-agent tools with evidence, guardrails, and a little emerald energy."></header>
+<main>
+<h1>Third Mind</h1>
+<p class="lead">A human-directed experiment in running a small team of AI agents. Duke (DukeZak37) sets the mission and approves anything public, paid or security-sensitive. Devin, Cognition's AI software engineer, running as the bot "Bahamut", builds and tests the code and reports back with evidence.</p>
+<p>Duke is a U.S. Army veteran (Fire Finder radar operator) with a hands-on background in electronics troubleshooting, heavy equipment, mechanic work and safety leadership, and he works in automotive sales today. He's experienced at presenting to groups, making online videos, and working over voice, streaming and remote-collaboration tools. He has spent a lot of self-reported time experimenting with Grok on games, workflows and bots, and he directs Third Mind as a nontraditional builder; the engineering is done in collaboration with Devin.</p>
+<p>This site is a showcase, not the implementation. The code stays private until it passes a security and privacy review.</p>
+
+<h2>How the team works</h2>
+<div class="grid">
+ <div class="card"><h3>Duke · founder</h3>Sets goals, approves anything risky, publishes what really happened.</div>
+ <div class="card"><h3>Third Mind GPT · planner</h3>Turns goals into written missions with checks and limits.</div>
+ <div class="card"><h3>Bahamut · Devin engineer</h3>Builds and tests on a development machine, reports IDs, hashes and test counts.</div>
+ <div class="card"><h3>Skynet · community bot</h3>A clearly labeled Discord bot. It never acts as Duke and never uses his login.</div>
+</div>
+
+<h2>What is real today</h2>
+<p><strong>Work in progress:</strong> Third Mind is under active development, and this page is updated as new work is verified, often daily.</p>
+<p><span class="tag live">REPORTED LIVE</span> runs against a real service · <span class="tag dev">DEV-TESTED</span> tests pass on a dev machine · <span class="tag sim">SIMULATED</span> mocked and labeled · <span class="tag plan">PLANNED</span> not built</p>
+<table>
+<thead><tr><th scope="col">Feature</th><th scope="col">Status</th></tr></thead>
+<tbody>
+<tr><td>Skynet Discord bot: dashboards, role menu, slash commands, 12 custom emoji</td><td><span class="tag live">REPORTED LIVE</span></td></tr>
+<tr><td>Telegram community bot with a join welcome</td><td><span class="tag live">REPORTED LIVE</span></td></tr>
+<tr><td>Agent hub: registry, tasks, shared memory, approvals, budgets, audit log</td><td><span class="tag dev">DEV-TESTED</span></td></tr>
+<tr><td>Guardian Forge read-only security baseline; evidence desk</td><td><span class="tag dev">DEV-TESTED</span></td></tr>
+<tr><td>GPT, Grok and Bahamut replies inside Discord</td><td><span class="tag sim">SIMULATED</span></td></tr>
+<tr><td>Twitch, X, SMS and OBS connectors</td><td><span class="tag sim">SIMULATED</span></td></tr>
+<tr><td>A real person clicking the Discord buttons</td><td><span class="tag todo">NOT YET VERIFIED</span></td></tr>
+<tr><td>Cloud deployment, Grok bot, paper-trading research</td><td><span class="tag plan">PLANNED</span></td></tr>
+</tbody>
+</table>
+
+<h2>Screens</h2>
+<div class="grid">
+ <figure><img src="assets/hub-dashboard-overview-mock.png" alt="Hub dashboard overview with mock agents and zero spend" loading="lazy"><figcaption>Hub dashboard, mock data</figcaption></figure>
+ <figure><img src="assets/hub-dashboard-community-mock.png" alt="Community tab with mock Telegram and Discord messages from test users" loading="lazy"><figcaption>Community feed, mock data and test users</figcaption></figure>
+</div>
+<figure style="margin-top:16px"><img src="assets/skynet-lab-header.png" alt="Skynet Lab channel header: agents, memory, commands" loading="lazy"><figcaption>Skynet Lab channel header, from Duke's own artwork</figcaption></figure>
+
+<h2>Guardrails</h2>
+<ul>
+<li>Bots are always disclosed and never use Duke's personal logins.</li>
+<li>Public posts, spending and security changes wait for Duke's approval.</li>
+<li>Simulated output is always labeled SIMULATED.</li>
+<li>No secrets in Git. CI scans every file and the full history.</li>
+</ul>
+
+<h2>Read more</h2>
+<ul>
+<li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/CASE_STUDY.md">Case study</a>: how the team works, and what went wrong</li>
+<li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/STATUS.md">Full status table</a></li>
+<li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/ARCHITECTURE.md">Architecture</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/PRIVACY_SECURITY.md">Privacy and security</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/ROADMAP.md">Roadmap</a></li>
+<li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/COVER_LETTER.md">Devin Ambassador cover letter</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/DEMO_SCRIPT.md">60-second demo</a></li>
+</ul>
+</main>
+<footer>Status as of 2026-11-19. Third Mind is an independent project and is not affiliated with or endorsed by Cognition. Source of this page: <a href="https://github.com/DukeZak37/third-mind-showcase">github.com/DukeZak37/third-mind-showcase</a>.</footer>
+</body>
+</html>

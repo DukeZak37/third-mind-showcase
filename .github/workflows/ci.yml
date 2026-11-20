@@ -1,0 +1,15 @@
+name: ci
+on: [push, pull_request]
+permissions: {contents: read}
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: No secrets in tracked files or history
+        run: python scripts/no_secrets.py
+      - name: Relative links resolve
+        run: python scripts/check_links.py
