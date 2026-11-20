@@ -5,54 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Third Mind · DukeZak37</title>
 <meta name="description" content="Third Mind: a human-directed multi-agent experiment by DukeZak37, built with Devin. What is real, what is simulated, and what is planned.">
+<meta property="og:title" content="Third Mind · DukeZak37"><meta property="og:description" content="One human, multiple AI agents, real evidence."><meta property="og:image" content="https://dukezak37.github.io/third-mind-showcase/assets/shield-37.png"><meta name="theme-color" content="#051014">
+<link rel="icon" href="assets/shield-37.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
-:root{--charcoal:#051014;--forest:#081F20;--emerald:#1BC880;--gold:#E4B35D;--parchment:#F4E7CC;--red:#E04237}
-*{box-sizing:border-box}
-body{margin:0;background:var(--charcoal);color:var(--parchment);font:16px/1.6 Inter,"Segoe UI",Helvetica,Arial,sans-serif}
-a{color:var(--emerald)}a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-header{border-bottom:4px solid var(--emerald)}
-header img{display:block;width:100%;height:auto;max-width:1200px;margin:0 auto}
-main{max-width:960px;margin:0 auto;padding:24px 20px 48px}
-h1{font-size:clamp(1.6rem,5vw,2.4rem);margin:.4em 0 .2em}
-h2{color:var(--gold);font-size:1.3rem;margin-top:2em;border-bottom:1px solid #1b3a36;padding-bottom:.3em}
-.lead{font-size:1.1rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--forest);border:1px solid #1b3a36;border-radius:10px;padding:16px}
-.card h3{margin:.1em 0 .4em;font-size:1.05rem}
+:root{--charcoal:#051014;--forest:#081F20;--emerald:#1BC880;--gold:#E4B35D;--parchment:#F4E7CC;--red:#E04237;--line:#1b3a36;--pix:"Press Start 2P",ui-monospace,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#0d3a30 0,transparent 60%),var(--charcoal);color:var(--parchment);font:16px/1.65 Inter,"Segoe UI",Helvetica,Arial,sans-serif;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+a{color:var(--emerald)}a:focus-visible,.player:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;z-index:99;background:var(--gold);color:#000;padding:6px}
+/* hero */
+.hero{position:relative;min-height:min(92vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 16px 120px;overflow:hidden;border-bottom:4px solid var(--emerald)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 30% 70%,#fff6 50%,transparent 51%),radial-gradient(2px 2px at 70% 30%,#E4B35D99 50%,transparent 51%),radial-gradient(1px 1px at 85% 60%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 55% 15%,#fff5 50%,transparent 51%),radial-gradient(2px 2px at 20% 45%,#1BC88088 50%,transparent 51%);background-size:300px 300px;animation:drift 60s linear infinite}
+@keyframes drift{to{background-position:300px 600px}}
+.sun{position:absolute;bottom:90px;left:50%;width:min(70vw,420px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:linear-gradient(#E4B35D,#E04237 70%);opacity:.22;-webkit-mask:repeating-linear-gradient(0deg,#000 0 14px,transparent 14px 20px);mask:repeating-linear-gradient(0deg,#000 0 14px,transparent 14px 20px)}
+.floor{position:absolute;left:-50%;right:-50%;bottom:-40px;height:260px;background-image:linear-gradient(var(--emerald) 2px,transparent 2px),linear-gradient(90deg,var(--emerald) 2px,transparent 2px);background-size:60px 40px;transform:perspective(300px) rotateX(62deg);transform-origin:bottom;opacity:.45;animation:run 1.6s linear infinite;-webkit-mask:linear-gradient(transparent,#000 60%);mask:linear-gradient(transparent,#000 60%)}
+@keyframes run{to{background-position:0 40px}}
+.marquee{position:relative;width:min(100%,900px);height:auto;border:3px solid var(--gold);box-shadow:0 0 0 4px var(--charcoal),0 0 0 6px var(--emerald),0 0 40px #1BC88066;animation:float 5s ease-in-out infinite}
+.shield{position:relative;width:clamp(140px,34vw,220px);height:auto;filter:drop-shadow(0 0 18px #1BC88088) drop-shadow(0 0 40px #E4B35D44);animation:float 4s ease-in-out infinite;border-radius:24px}
+@keyframes float{50%{transform:translateY(-10px)}}
+.title{position:relative;font-family:var(--pix);font-size:clamp(1.5rem,6.5vw,3.4rem);line-height:1.25;margin:.6em 0 .2em;color:var(--parchment);text-shadow:3px 3px 0 var(--red),-2px -2px 0 #1BC88099,0 0 24px #1BC880aa;letter-spacing:.04em}
+.title small{display:block;font-size:.38em;color:var(--gold);text-shadow:0 0 12px #E4B35D88;margin-bottom:.6em;letter-spacing:.2em}
+.tagline{position:relative;max-width:640px;font-size:clamp(1rem,2.6vw,1.2rem);color:#d9efe6}
+.start{position:relative;margin-top:28px;font-family:var(--pix);font-size:.8rem;color:var(--charcoal);background:var(--gold);padding:14px 22px;text-decoration:none;box-shadow:4px 4px 0 var(--red),0 0 24px #E4B35D66;display:inline-block}
+.start:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red),0 0 30px #E4B35D99}
+.blink{animation:blink 1.1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.coin{position:relative;margin-top:14px;font-family:var(--pix);font-size:.6rem;color:#8fd9b9;letter-spacing:.15em}
+/* ticker */
+.ticker{overflow:hidden;background:#020a0c;border-bottom:2px solid var(--gold);font-family:var(--pix);font-size:.62rem;color:var(--emerald);white-space:nowrap}
+.ticker div{display:inline-block;padding:10px 0;animation:tick 38s linear infinite}
+.ticker b{color:var(--gold);font-weight:400}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+nav.hud{position:sticky;top:0;z-index:40;display:flex;gap:4px;justify-content:center;flex-wrap:wrap;background:#051014ee;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:8px}
+nav.hud a{font-family:var(--pix);font-size:.55rem;color:var(--parchment);text-decoration:none;padding:8px 10px;border:1px solid var(--line)}
+nav.hud a:hover{color:var(--charcoal);background:var(--emerald)}
+main{max-width:1000px;margin:0 auto;padding:16px 20px 48px}
+.intro{background:linear-gradient(135deg,#0a2724,#061416);border:2px solid var(--emerald);box-shadow:0 0 0 4px var(--charcoal),0 0 0 6px var(--gold);padding:18px 20px;margin:28px 0}
+.intro .lead{font-size:1.08rem;margin-top:0}
+h2{font-family:var(--pix);color:var(--gold);font-size:clamp(.9rem,3.4vw,1.25rem);line-height:1.5;margin:2.6em 0 .6em;text-shadow:0 0 10px #E4B35D55;scroll-margin-top:70px}
+h2 .lvl{display:block;font-size:.55em;color:var(--emerald);letter-spacing:.2em;margin-bottom:.6em}
+.sub{color:#bcd3cc;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{position:relative;background:var(--forest);border:2px solid var(--line);padding:16px;transition:transform .15s,box-shadow .15s,border-color .15s}
+.card h3{margin:.4em 0 .4em;font-size:1.02rem}
+.player:hover,.player:focus{transform:translateY(-6px);border-color:var(--emerald);box-shadow:0 10px 0 -2px #000,0 0 26px #1BC88066}
+.player.gold:hover,.player.gold:focus{border-color:var(--gold);box-shadow:0 10px 0 -2px #000,0 0 26px #E4B35D77}
+.player.red:hover,.player.red:focus{border-color:var(--red);box-shadow:0 10px 0 -2px #000,0 0 26px #E0423766}
+.portrait{display:block;width:100%;max-width:160px;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto 10px;border:3px solid var(--gold);box-shadow:0 0 18px #1BC88066}
+.red .portrait{border-color:var(--red)}
+.sprite{width:100%;max-width:160px;aspect-ratio:1;margin:0 auto 10px;border-radius:50%;border:3px solid var(--emerald);display:flex;align-items:center;justify-content:center;font-size:4.2rem;color:var(--emerald);background:radial-gradient(#0d3a30,#020a0c 70%);text-shadow:0 0 18px #1BC880}
+.stage-art{display:block;width:100%;height:auto;border:2px solid var(--line);margin:4px 0 14px}
+.pslot{font-family:var(--pix);font-size:1.1rem;color:var(--emerald);display:flex;justify-content:space-between;align-items:center}
+.gold .pslot{color:var(--gold)}.red .pslot{color:#ff8a7e}
+.pslot span{font-size:.5rem;color:#bcd3cc;letter-spacing:.1em}
+.board{border:3px solid var(--emerald);box-shadow:0 0 30px #1BC88033 inset,0 0 0 3px var(--charcoal),0 0 0 5px var(--gold);background:#020c0d;padding:8px 10px 4px;margin-top:12px}
+.board-title{font-family:var(--pix);text-align:center;color:var(--gold);font-size:.75rem;padding:10px 0 12px;letter-spacing:.15em}
 table{width:100%;border-collapse:collapse;font-size:.95rem}
-th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #1b3a36;vertical-align:top}
-th{color:var(--gold)}
-.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap}
-.live{background:var(--emerald);color:var(--charcoal)}
+th,td{text-align:left;padding:10px 6px;border-bottom:1px dashed #1b3a36;vertical-align:top}
+th{font-family:var(--pix);font-size:.55rem;color:var(--emerald);letter-spacing:.1em}
+tbody tr:hover{background:#0b2522}
+.tag{display:inline-block;font-family:var(--pix);font-size:.5rem;line-height:1.6;letter-spacing:.06em;padding:4px 8px;white-space:nowrap}
+.live{background:var(--emerald);color:var(--charcoal);box-shadow:0 0 12px #1BC88088}
 .dev{background:var(--gold);color:var(--charcoal)}
 .sim{border:1px solid var(--parchment);color:var(--parchment)}
 .plan{border:1px dashed #8aa39c;color:#c9d6d2}
 .todo{border:1px solid var(--red);color:#ffb4ac}
-figure{margin:0}figure img{width:100%;height:auto;border-radius:8px;border:1px solid #1b3a36}
-figcaption{font-size:.85rem;color:#c9d6d2;margin-top:4px}
-footer{max-width:960px;margin:0 auto;padding:0 20px 32px;font-size:.85rem;color:#c9d6d2}
+.legend{line-height:2.4}
+figure{margin:0}
+.crt{background:#000;padding:10px;border:2px solid #2a4a44;border-radius:18px;box-shadow:inset 0 0 30px #000,0 0 0 4px #0b1a1a}
+.crt img{display:block;width:100%;height:auto;border-radius:10px;filter:saturate(1.1) contrast(1.05)}
+.crt.wide{margin-top:16px}
+figcaption{font-family:var(--pix);font-size:.5rem;line-height:1.8;color:#9fc6b8;margin:8px 4px 0;letter-spacing:.06em}
+ul.rules,ul.more{list-style:none;padding:0}
+ul.rules li,ul.more li{padding:8px 0 8px 30px;position:relative}
+ul.rules li::before{content:"\2666";position:absolute;left:6px;color:var(--gold)}
+ul.more li::before{content:"\25B6";position:absolute;left:6px;color:var(--emerald)}
+footer{max-width:1000px;margin:0 auto;padding:16px 20px 40px;font-size:.85rem;color:#c9d6d2;border-top:1px solid var(--line)}
+.gameover{font-family:var(--pix);text-align:center;color:var(--emerald);font-size:.7rem;margin:40px 0 8px;letter-spacing:.2em}
+body.turbo .floor{animation-duration:.4s}body.turbo .title{animation:hue 2s linear infinite}@keyframes hue{to{filter:hue-rotate(360deg)}}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);font-family:var(--pix);font-size:.6rem;background:var(--gold);color:#000;padding:12px 16px;z-index:60;display:none}
+@media (max-width:560px){.players{grid-template-columns:1fr 1fr;gap:10px}.players .card{padding:10px}.players .card h3{font-size:.92rem}.players .card{font-size:.88rem}.sprite{font-size:2.6rem}.pslot{font-size:.8rem}.pslot span{font-size:.4rem}th:first-child{width:62%}nav.hud a{padding:7px 6px;font-size:.5rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><img src="assets/banner.svg" alt="DUKEZAK37 · THIRD MIND. Cutting through the noise. Human-directed multi-agent tools with evidence, guardrails, and a little emerald energy."></header>
-<main>
-<h1>Third Mind</h1>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero">
+ <div class="stars" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div><div class="floor" aria-hidden="true"></div>
+ <img class="marquee" src="assets/third-mind-wide.webp" alt="Third Mind marquee art: the dragon 37 crest, an emerald-winged hooded guardian and the words Third Mind, Skynet, Be Blessed" width="1600" height="533">
+ <h1 class="title"><small>DUKEZAK37 PRESENTS</small>THIRD MIND</h1>
+ <p class="tagline">One human, multiple AI agents, and real systems with the evidence to back them up.</p>
+ <a class="start" href="#main"><span class="blink">&#9654;</span> PRESS START</a>
+ <p class="coin">HUMAN DIRECTED &#183; AGENT BUILT &#183; EVIDENCE CHECKED</p>
+</header>
+<div class="ticker" aria-hidden="true"><div><b>NOW PLAYING</b> THIRD MIND &#9670; ONE HUMAN + MULTIPLE AI AGENTS &#9670; 78 HUB TESTS PASSED IN AN INDEPENDENT RERUN &#9670; SKYNET DISCORD BOT: <b>REPORTED LIVE</b> &#9670; SIMULATED IS ALWAYS LABELED SIMULATED &#9670; NEW WORK ADDED OFTEN DAILY &#9670; HUMAN APPROVES EVERY RISKY MOVE &#9670; <b>NOW PLAYING</b> THIRD MIND &#9670; ONE HUMAN + MULTIPLE AI AGENTS &#9670; 78 HUB TESTS PASSED IN AN INDEPENDENT RERUN &#9670; SKYNET DISCORD BOT: <b>REPORTED LIVE</b> &#9670; SIMULATED IS ALWAYS LABELED SIMULATED &#9670; NEW WORK ADDED OFTEN DAILY &#9670; HUMAN APPROVES EVERY RISKY MOVE &#9670; </div></div>
+<nav class="hud" aria-label="Sections"><a href="#team">PLAYERS</a><a href="#status">STATUS</a><a href="#screens">SCREENS</a><a href="#rules">RULES</a><a href="#more">MORE</a></nav>
+<main id="main">
+<section class="intro" aria-label="About">
 <p class="lead">A human-directed experiment in running a small team of AI agents. Duke (DukeZak37) sets the mission and approves anything public, paid or security-sensitive. Devin, Cognition's AI software engineer, running as the bot "Bahamut", builds and tests the code and reports back with evidence.</p>
 <p>Duke is a U.S. Army veteran (Fire Finder radar operator) with a hands-on background in electronics troubleshooting, heavy equipment, mechanic work and safety leadership, and he works in automotive sales today. He's experienced at presenting to groups, making online videos, and working over voice, streaming and remote-collaboration tools. He has spent a lot of self-reported time experimenting with Grok on games, workflows and bots, and he directs Third Mind as a nontraditional builder; the engineering is done in collaboration with Devin.</p>
 <p>This site is a showcase, not the implementation. The code stays private until it passes a security and privacy review.</p>
-
-<h2>How the team works</h2>
-<div class="grid">
- <div class="card"><h3>Duke · founder</h3>Sets goals, approves anything risky, publishes what really happened.</div>
- <div class="card"><h3>Third Mind GPT · planner</h3>Turns goals into written missions with checks and limits.</div>
- <div class="card"><h3>Bahamut · Devin engineer</h3>Builds and tests on a development machine, reports IDs, hashes and test counts.</div>
- <div class="card"><h3>Skynet · community bot</h3>A clearly labeled Discord bot. It never acts as Duke and never uses his login.</div>
+</section>
+<h2 id="team"><span class="lvl">STAGE 1</span>SELECT YOUR PLAYER</h2>
+<img class="stage-art" src="assets/hdr-agent-coordination.webp" alt="Agent coordination header: Third Mind, Bahamut, GPT" width="1200" height="375" loading="lazy">
+<p class="sub">One human, three AI teammates. The human holds the controller.</p>
+<div class="grid players">
+ <div class="card player gold" tabindex="0"><img class="portrait" src="assets/duke-guardian.webp" alt="Duke's founder avatar: a hooded holy-tech guardian with a 37 crest and an emerald sword" width="160" height="160" loading="lazy"><div class="pslot">P1<span>HUMAN</span></div><h3>Duke · founder</h3>Sets goals, approves anything risky, publishes what really happened.</div>
+ <div class="card player em" tabindex="0"><div class="sprite" aria-hidden="true">&#10070;</div><div class="pslot">P2<span>AI · PLANNER</span></div><h3>Third Mind GPT · planner</h3>Turns goals into written missions with checks and limits.</div>
+ <div class="card player em" tabindex="0"><div class="sprite" aria-hidden="true">&#9881;</div><div class="pslot">P3<span>AI · BUILDER</span></div><h3>Bahamut · Devin engineer</h3>Builds and tests on a development machine, reports IDs, hashes and test counts.</div>
+ <div class="card player red" tabindex="0"><img class="portrait" src="assets/skynet-icon.webp" alt="Skynet bot icon: a hooded AI guardian" width="160" height="160" loading="lazy"><div class="pslot">P4<span>DISCLOSED BOT</span></div><h3>Skynet · community bot</h3>A clearly labeled Discord bot. It never acts as Duke and never uses his login.</div>
 </div>
 
-<h2>What is real today</h2>
+<h2 id="status"><span class="lvl">STAGE 2</span>WHAT IS REAL TODAY</h2>
 <p><strong>Work in progress:</strong> Third Mind is under active development, and this page is updated as new work is verified, often daily.</p>
 <p><span class="tag live">REPORTED LIVE</span> runs against a real service · <span class="tag dev">DEV-TESTED</span> tests pass on a dev machine · <span class="tag sim">SIMULATED</span> mocked and labeled · <span class="tag plan">PLANNED</span> not built</p>
-<table>
+<div class="board"><div class="board-title">&#9654; STATUS BOARD &#9664;</div><table>
 <thead><tr><th scope="col">Feature</th><th scope="col">Status</th></tr></thead>
 <tbody>
 <tr><td>Skynet Discord bot: dashboards, role menu, slash commands, 12 custom emoji</td><td><span class="tag live">REPORTED LIVE</span></td></tr>
@@ -64,31 +133,39 @@ footer{max-width:960px;margin:0 auto;padding:0 20px 32px;font-size:.85rem;color:
 <tr><td>A real person clicking the Discord buttons</td><td><span class="tag todo">NOT YET VERIFIED</span></td></tr>
 <tr><td>Cloud deployment, Grok bot, paper-trading research</td><td><span class="tag plan">PLANNED</span></td></tr>
 </tbody>
-</table>
+</table></div>
 
-<h2>Screens</h2>
-<div class="grid">
- <figure><img src="assets/hub-dashboard-overview-mock.png" alt="Hub dashboard overview with mock agents and zero spend" loading="lazy"><figcaption>Hub dashboard, mock data</figcaption></figure>
- <figure><img src="assets/hub-dashboard-community-mock.png" alt="Community tab with mock Telegram and Discord messages from test users" loading="lazy"><figcaption>Community feed, mock data and test users</figcaption></figure>
+<h2 id="screens"><span class="lvl">STAGE 3</span>SCREENS</h2>
+<img class="stage-art" src="assets/hdr-experiments.webp" alt="Experiments header: build, test, learn" width="1200" height="375" loading="lazy">
+<div class="grid crt-grid">
+ <figure class="crt"><img src="assets/hub-dashboard-overview-mock.png" alt="Hub dashboard overview with mock agents and zero spend" loading="lazy"><figcaption>Hub dashboard, mock data</figcaption></figure>
+ <figure class="crt"><img src="assets/hub-dashboard-community-mock.png" alt="Community tab with mock Telegram and Discord messages from test users" loading="lazy"><figcaption>Community feed, mock data and test users</figcaption></figure>
 </div>
-<figure style="margin-top:16px"><img src="assets/skynet-lab-header.png" alt="Skynet Lab channel header: agents, memory, commands" loading="lazy"><figcaption>Skynet Lab channel header, from Duke's own artwork</figcaption></figure>
+<figure class="crt wide"><img src="assets/skynet-lab-header.png" alt="Skynet Lab channel header: agents, memory, commands" loading="lazy"><figcaption>Skynet Lab channel header, from Duke's own artwork</figcaption></figure>
 
-<h2>Guardrails</h2>
-<ul>
+<h2 id="rules"><span class="lvl">STAGE 4</span>HOUSE RULES</h2>
+<img class="stage-art" src="assets/hdr-audit-log.webp" alt="Audit log header: provenance, changes, results" width="1200" height="375" loading="lazy">
+<ul class="rules">
 <li>Bots are always disclosed and never use Duke's personal logins.</li>
 <li>Public posts, spending and security changes wait for Duke's approval.</li>
 <li>Simulated output is always labeled SIMULATED.</li>
 <li>No secrets in Git. CI scans every file and the full history.</li>
 </ul>
 
-<h2>Read more</h2>
-<ul>
+<h2 id="more"><span class="lvl">BONUS</span>CONTINUE?</h2>
+<ul class="more">
 <li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/CASE_STUDY.md">Case study</a>: how the team works, and what went wrong</li>
 <li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/STATUS.md">Full status table</a></li>
 <li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/ARCHITECTURE.md">Architecture</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/PRIVACY_SECURITY.md">Privacy and security</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/ROADMAP.md">Roadmap</a></li>
 <li><a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/COVER_LETTER.md">Devin Ambassador cover letter</a> · <a href="https://github.com/DukeZak37/third-mind-showcase/blob/main/docs/DEMO_SCRIPT.md">60-second demo</a></li>
 </ul>
+<img class="stage-art" src="assets/strip-emerald.webp" alt="Third Mind emerald strip art" loading="lazy">
+<p class="gameover">&#9733; THANKS FOR PLAYING &#9733;</p>
 </main>
 <footer>Status as of 2026-11-19. Third Mind is an independent project and is not affiliated with or endorsed by Cognition. Source of this page: <a href="https://github.com/DukeZak37/third-mind-showcase">github.com/DukeZak37/third-mind-showcase</a>.</footer>
+<div id="toast" role="status"></div>
+<script>
+(function(){var k=[38,38,40,40,37,39,37,39,66,65],i=0;addEventListener('keydown',function(e){i=(e.keyCode===k[i])?i+1:(e.keyCode===k[0]?1:0);if(i===k.length){i=0;document.body.classList.toggle('turbo');var t=document.getElementById('toast');t.textContent=document.body.classList.contains('turbo')?'TURBO MODE ON':'TURBO MODE OFF';t.style.display='block';setTimeout(function(){t.style.display='none'},1800)}})})();
+</script>
 </body>
 </html>
