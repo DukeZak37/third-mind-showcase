@@ -14,6 +14,8 @@ presenting to groups, making online videos, and working over voice, streaming an
 self-reported time experimenting with Grok on games, workflows and bots, and he directs this project as a nontraditional
 builder: missions, approvals and evidence, with the engineering done in collaboration with Devin.
 
+Website: https://dukezak37.github.io/third-mind-showcase/
+
 This repo is the **public showcase**: the case study, architecture, status and principles. It is documentation only.
 The implementation lives in private repos until it passes a security and privacy review.
 
